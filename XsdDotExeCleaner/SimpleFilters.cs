@@ -140,6 +140,8 @@ namespace XsdDotExeCleaner
 
                 yield return enumerator.Current;
                 enumerator.MoveNext();
+                if (!string.IsNullOrWhiteSpace(enumerator.Current))
+                    yield return enumerator.Current;
             }
         }
 
